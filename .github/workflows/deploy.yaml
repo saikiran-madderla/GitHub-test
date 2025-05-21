@@ -104,7 +104,7 @@ jobs:
 
       - name: Build and Deploy to Cloud Run
         run: |
-          gcloud builds submit ./app \
+          gcloud builds submit . \
             --tag us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/hello-repo1/hello-app
           gcloud run deploy hello-app \
             --image us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/hello-repo1/hello-app \
